@@ -20,16 +20,18 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<bcrypt-ruby>, ["~> 2.1.1"])
+      s.add_runtime_dependency(%q<bcrypt>, ["~> 3.1.3"])
       s.add_development_dependency(%q<shoulda>, [">= 0"])
       s.add_development_dependency(%q<mocha>, [">= 0"])
+      s.add_development_dependency(%q<rake>, ['~> 0.9.6'])
+      s.add_development_dependency(%q<test-unit>, ['~> 1.2.3'])
     else
-      s.add_dependency(%q<bcrypt-ruby>, ["~> 2.1.1"])
+      s.add_dependency(%q<bcrypt>, ["~> 3.1.3"])
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<mocha>, [">= 0"])
     end
   else
-    s.add_dependency(%q<bcrypt-ruby>, ["~> 2.1.1"])
+    s.add_dependency(%q<bcrypt>, ["~> 3.1.3"])
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<mocha>, [">= 0"])
   end
